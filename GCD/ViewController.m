@@ -19,9 +19,6 @@
 {
     [super viewDidLoad];
     
-   // dispatch_queue_t myQue= dispatch_queue_create("myQueueName",NULL);
-   //  dispatch_async(myQue, ^{[];});
-    
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -42,9 +39,10 @@
 }
 
 -(void)longRunningOperation{
+    
+    
     [NSThread sleepForTimeInterval:5];
     //Update the view element in the main queue.
-    
     dispatch_async(dispatch_get_main_queue(), ^{[self.resutLabel setText:[NSString stringWithFormat:@"Results: %d", arc4random()]];});
     
 }
