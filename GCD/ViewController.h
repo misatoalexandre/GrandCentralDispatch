@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *resutLabel;
+- (IBAction)buttonPressed:(id)sender;
+
 @end
