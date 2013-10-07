@@ -43,6 +43,7 @@
 
 -(void)longRunningOperation{
     [NSThread sleepForTimeInterval:5];
+    //Update the view element in the main queue.
     
     dispatch_async(dispatch_get_main_queue(), ^{[self.resutLabel setText:[NSString stringWithFormat:@"Results: %d", arc4random()]];});
     
